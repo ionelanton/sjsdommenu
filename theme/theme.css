@@ -1,0 +1,27 @@
+.sjsdommenu, .sjsdommenu-hidden, .sjsdommenu-visible {
+	position: absolute;
+}
+
+.sjsdommenu {
+	border: 1px solid #dedede;
+	cursor: pointer;
+	text-align: left;
+	background-color: #fffcff;
+}
+
+.sjsdommenu-hidden {
+	visibility: hidden;
+}
+
+.sjsdommenu-visible {
+	visibility: visible;
+}
+
+.sjsdommenu td, .sjsdommenu-inactive td {
+	color: #000066;
+}
+
+.sjsdommenu-active td {
+	color: #660000;
+}
+

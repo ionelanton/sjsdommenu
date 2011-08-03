@@ -1,0 +1,32 @@
+<html>
+<title>Simple Javascript DOM Menu</title>
+<head>
+	<script type="text/javascript" language="javascript" src="sjsdommenu.js"></script>
+	<script type="text/javascript" language="javascript" src="sjsdommenu.options.js"></script>
+	<link href="theme/theme.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div style="padding: 20px 100px;">
+
+	<h3>Simple Javascript DOM Menu</h3>
+
+	<p>&nbsp;</p>
+
+	<div id="menu1"></div>
+	
+	<p style="height: 200px;">&nbsp;</p>
+	
+	<div id="menu2"></div>
+</div>
+
+<script type="text/javascript">
+	var menu1 = new Menu(options1, 'menu1', 'horizontal');
+	menu1.generate();
+	
+	var menu2 = new Menu(options2, 'menu2');
+	menu2.generate();
+</script>
+
+</body>
+</html>
