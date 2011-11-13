@@ -135,21 +135,30 @@ Option.prototype.generate = function(orientation) {
 		if (null == this.icon)
 			this.icon = sjsdommenu_theme + '/link.gif';
 	}
+
+	var td_icon = document.createElement('td');
+	var td_text = document.createElement('td');
+	var td_arrow = document.createElement('td');
+		
+	td_icon.innerHTML = '<img src="' + this.icon + '" />';
+	td_text.innerHTML = this.text;
+	td_arrow.innerHTML = '<img src="' + this.arrow + '" />';
+
 	
 	if ('horizontal' == this.parent.orientation) {
 		this.dom = document.createElement('table');
-		this.dom.innerHTML = '<tbody><tr><td><img src="' + this.icon + '" /></td><td>' + this.text + '</td><td><img src="' + this.arrow + '" /></td></tr></tbody>';
+		var tbody = document.createElement('tbody');
+		
+		var tr = document.createElement('tr');
+		tr.appendChild(td_icon);
+		tr.appendChild(td_text);
+		tr.appendChild(td_arrow);
+
+		tbody.appendChild(tr);
+		this.dom.appendChild(tbody);
+		
 	} else {
 		this.dom = document.createElement('tr');
-		
-		var td_icon = document.createElement('td');
-		var td_text = document.createElement('td');
-		var td_arrow = document.createElement('td');
-		
-		td_icon.innerHTML = '<img src="' + this.icon + '" />';
-		td_text.innerHTML = this.text;
-		td_arrow.innerHTML = '<img src="' + this.arrow + '" />';
-		
 		this.dom.appendChild(td_icon);
 		this.dom.appendChild(td_text);
 		this.dom.appendChild(td_arrow);
@@ -198,7 +207,7 @@ function convertOptions(array_menu, array) {
 	array = new Array();
 	
 	for (var i = 0; i < array_menu.length; i++) {
-		if (null == array_menu[i][5]) {
+		if (null === array_menu[i][5]) {
 			array.push(new Option(array_menu[i][0], array_menu[i][1], array_menu[i][2], array_menu[i][3], array_menu[i][4], null));
 		} else {
 			array.push(new Option(array_menu[i][0], array_menu[i][1], array_menu[i][2], array_menu[i][3], array_menu[i][4], new Menu(convertOptions(array_menu[i][5]))));

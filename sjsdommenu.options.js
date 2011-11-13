@@ -9,12 +9,12 @@ options1 = convertOptions([
 					 	 	['Python', 'http://www.python.org', null, null, 'python.gif', null],
 					 	 	['Ruby', '#', null, null, 'ruby.gif',
 					 	 	 	[
-					 	 	 	 	['Ruby on Rails', 'http://www.rubyonrails.org', null, null, null, null],
+					 	 	 	    ['Ruby on Rails', 'http://www.rubyonrails.org', null, null, null, null],
 					 	 	 	    ['Ruby Mate', 'http://rubymate.com', null, null, null, null],
 					 	 	 	    ['Rake', 'http://rake.rubyforge.org', null, null, null, null]
 					 	 	 	]
 					 	 	],
-					 	 	['Perl', 'http://www.perl.org', null, null, 'perl.gif', null],
+					 	 	['Perl', 'http://www.perl.org', null, null, 'perl.gif', null]
 					 	]
 					],
 					['Statically Typed', '#', null, null, null,
@@ -55,7 +55,7 @@ options2 = convertOptions([
                					 	 	 	    ['Rake', 'http://rake.rubyforge.org', null, null, null, null]
                					 	 	 	]
                					 	 	],
-               					 	 	['Perl', 'http://www.perl.org', null, null, 'perl.gif', null],
+               					 	 	['Perl', 'http://www.perl.org', null, null, 'perl.gif', null]
                					 	]
                					],
                					['Statically Typed', '#', null, null, null,
